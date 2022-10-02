@@ -44,27 +44,21 @@ color_value1 = [parseInt(color_value1[0] + color_value1[1], 16), parseInt(color_
 color_value2 = [parseInt(color_value2[0] + color_value2[1], 16), parseInt(color_value2[2] + color_value2[3], 16), parseInt(color_value2[4] + color_value2[5], 16)];
 
 var total_color = [(1 - amount) * color_value1[0] + amount * color_value2[0], (1 - amount) * color_value1[1] + amount * color_value2[1], (1 - amount) * color_value1[2] + amount * color_value2[2]];
-total_color = '#' + int_to_hex(total_color[0]) + int_to_hex(total_color[1]) + int_to_hex(total_color[2]);
+total_color = "#" + int_to_hex(total_color[0]) + int_to_hex(total_color[1]) + int_to_hex(total_color[2]);
 
 
 
 if (debug_mode == 1)
 {
 //color output to canvas
-var cvs = document.createElement('canvas');
-var ctx = cvs.getContext('2d');
-cvs.width = 90;
-cvs.height = 25;
-document.body.appendChild(cvs);
-
-ctx.fillStyle = color_value1;
-ctx.fillRect(0, 0, 30, 25);
-
-ctx.fillStyle = color_value2;
-ctx.fillRect(60, 0, 30, 25);
+var canvas_ = document.createElement("canvas");
+var ctx = canvas_.getContext("2d");
+canvas_.width = 128;
+canvas_.height = 128;
+document.body.appendChild(canvas_);
 
 ctx.fillStyle = total_color;
-ctx.fillRect(30, 0, 30, 25);
+ctx.fillRect(0, 0, 128, 128);
 }
 
 
