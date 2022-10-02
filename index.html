@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang = "ko">
+    <head></head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "initial-scale = 1, minimum-scale = 1">
+    
+    <title>Test color merged</title>
+
+    <body id = "body_t" class = "body_t">
+        <style>
+        .body_t
+        {
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        overflow-y: hidden;
+        }
+        </style>
+    </body>
+    
+    <script src = "scripts.js"></script>
+    
+    <script>
+    document.addEventListener("click",function()
+    {
+    var random_value = Math.floor(Math.random()*10 | 1);
+    merge_color("#c6b3b5","#111325",random_value/10,1);
+    })
+    </script>
+</html>
