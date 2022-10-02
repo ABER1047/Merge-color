@@ -1,7 +1,5 @@
 # merge_color in javascript
 
-![preview_1](imgs/color_img.PNG)
-
 ## What is this?
 
 It makes you can get merged color easily with this.
@@ -13,54 +11,60 @@ It makes you can get merged color easily with this.
 At first, define below code
 
 ```
-<script src = "https://cdn.jsdelivr.net/gh/ABER1047/Merge-color@main/scripts.js"></script>
+<script src = "https://cdn.jsdelivr.net/gh/ABER1047/math_function@main/scripts.js"></script>
 ```
 
-and then, you can use the below function
+### point_distance(x1,y1,x2,y2)
 
-```
-merge_color(color1, color2, amount, debug_mode);
-```
+-------------
 
-you need to set the parameter **"color1"** and **"color2"**
-**(hex color only)**
+![preview_1](imgs/img_distance.PNG)
+
+This function returns the length of a vector formed by the specified components [x1,y1] and [x2,y2]
+
+you can use this function when you want to get distance between two points
 
 </br>
 
-</br>
 
-And then set the parameter **"amount"** to merge colors  
-**(0 is minimum and 1 is maximum. if amount value is less than 0 or over than 1, it is applied 0 and 1**
-**if amount is 0, you can get only "color1" value, and if amount is 1, you can get only "color2" value)**
 
-</br>
+### point_direction(x1,y1,x2,y2)
 
-</br>
+-------------
 
-and if you want to see the result color, set the parameter **"debug_mode"** into 1
+![preview_1](imgs/img_angle.PNG)
 
-it show you the result using canvas
-
-**(if you don't want to debug, just make parameter "debug_mode" empty or enter "0"**
+This function returns the direction of a vector formed by the specified components [x1,y1] and [x2,y2]
 
 </br>
 
-## Example
 
-```
+### place_meeting_point(x1,y1,x2,y2,rad)
 
-//define the function "merge_color()"
-<script src = "https://cdn.jsdelivr.net/gh/ABER1047/Merge-color@main/scripts.js"></script>
+-------------
 
-<script>
+![preview_1](imgs/img_place_meeting_point.PNG)
 
-//it return "gray" color
-merge_color("#ffffff", "#2a2a28", 0.5);
+This function returns "true" when a point met or be inside a circle
 
-//if you want to see the result, use the parameter "debug mode"
-merge_color("#ffffff", "#2a2a28", 0.5, 1);
 
-</script>
+</br>
 
-```
 
+### place_meeting_circle(x1,y1,x2,y2,rad1,rad2)
+
+-------------
+
+![preview_1](imgs/img_place_meeting.PNG)
+
+This function returns "true" when two circles(collision mask) met
+
+
+</br>
+
+
+### irandom_range(range_1,range_2)
+
+-------------
+
+You supply the low value for the range as well as the high value, and the function will return a random integer value within (and including) the given range. For example, irandom_range(10, 35) will return an integer between 10 and 35 inclusive.
